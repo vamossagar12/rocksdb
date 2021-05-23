@@ -1161,12 +1161,12 @@ public class DbBenchmark {
                 return Long.parseLong(value);
             }
         },
-        merge_keys(-1L,
+        merge_keys(-1,
                 "Number of distinct keys to use for MergeRandom and\n" +
                         "\tReadRandomMergeRandom.\n" +
                         "\tIf negative, there will be FLAGS_num keys.") {
             @Override public Object parseValue(String value) {
-                return Long.parseLong(value);
+                return Integer.parseInt(value);
             }
         },
         merge_operator(null,
